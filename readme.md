@@ -18,6 +18,8 @@ npm install
 DB name: backend-tahap-2
 DBMS: MySQL
 
+(XAMPP bundle)
+
 more info in : ./config/config.json
 ```
 
