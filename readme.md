@@ -1,3 +1,5 @@
+# BASIC GUIDE
+
 ### 1. Clone
 ```
 git clone https://github.com/akmaladisa/backend-tahap-2.git
@@ -36,3 +38,6 @@ npm run dev
 ```
 http://localhost:8888/
 ```
+
+# API ENDPOINT
+
