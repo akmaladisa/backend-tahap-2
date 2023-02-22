@@ -6,13 +6,13 @@ module.exports = async (req, res) => {
 
   const user = await User.findByPk(userId);
 
-  const courseWithSameUser = await UserCourse.findAll({
+  const courseWithSameUser = await UserCourse.findOne({
     where: {
       users_id: userId
     }
   })
 
-  if( courseWithSameUser.length > 0 ) {
+  if( courseWithSameUser ) {
     return res.status(400).json({
       message: "User still used in user_courses table"
     })

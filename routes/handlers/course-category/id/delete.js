@@ -12,13 +12,13 @@ module.exports = async (req, res) => {
         })
     };
 
-    const courseWithSameCategoryId = Course.findAll({
+    const courseWithSameCategoryId = Course.findOne({
         where: {
             course_category_id: categoryId
         }
     });
 
-    if( courseWithSameCategoryId.length > 0 ) {
+    if( courseWithSameCategoryId ) {
         return res.status(400).json({
             message: `course category ID ${categoryId} is still used in courses table`
         })
