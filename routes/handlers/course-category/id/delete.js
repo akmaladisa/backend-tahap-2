@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
         })
     };
 
-    const courseWithSameCategoryId = Course.findOne({
+    const courseWithSameCategoryId = await Course.findOne({
         where: {
             course_category_id: categoryId
         }
